@@ -1,0 +1,431 @@
+.loginContainer {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+}
+
+.loginContainer .box {
+  width: 100%;
+  max-width: 600px;
+  height: 370px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.loginContainer .box .bg {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  overflow: hidden;
+}
+.loginContainer .box .bg img {
+  width: 200px;
+  height: 380px;
+  object-fit: cover;
+  position: relative;
+  display: block;
+}
+
+.loginContainer .box .form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #da1a29, #000);
+  overflow: hidden;
+  height: 370px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 30px #333;
+  gap: 10px;
+  padding: 20px;
+  z-index: 10;
+}
+
+.loginContainer .box .form h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--white);
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.loginContainer .box .form p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f2c913;
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.loginContainer .box .form form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  width: 100%;
+  gap: 7px;
+}
+
+.loginContainer .box .form form label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+  position: relative;
+  display: block;
+}
+
+.loginContainer .box .form form input {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black);
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  padding: 7px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.loginContainer .box .form form div {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.loginContainer .box .form form button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: #066915;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--white);
+  width: 100%;
+  max-width: 250px;
+}
+
+.loginContainer .box .form form div button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: #da1a29;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--white);
+  width: auto;
+}
+
+.payment {
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.419);
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.payment section {
+  width: 90%;
+  background-color: var(--black);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.419);
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 30px;
+}
+
+.payment .paymentTitle {
+  background-color: #009ee3 !important;
+}
+
+.payment .paymentTitle h1 {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.payment .paymentTitle sub {
+  font-size: 12px;
+  margin-top: -15px;
+  margin-left: 60px;
+}
+
+.payment .paymentTitle svg {
+  font-size: 58px;
+  vertical-align: middle;
+}
+
+.payment .paymentHistory h2 {
+  font-size: 32px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.payment .paymentHistory p {
+  font-size: 12px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.payment .paymentHistory p a {
+  color: #009ee3;
+}
+
+.payment .paymentHistory ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment .paymentHistory .payOpen {
+  font-size: 16px;
+  color: #f2c913;
+  transition: 0.4s all;
+  line-height: 1.9;
+}
+
+.payment .paymentHistory .payOpen:hover {
+  color: #009ee3;
+}
+
+.payment .paymentHistory .payOpen svg {
+  color: #da1a29;
+  font-size: 19px;
+  vertical-align: sub;
+}
+
+.payment .paymentHistory .payDone {
+  font-size: 16px;
+  color: #d7d7d7;
+  transition: 0.4s all;
+  line-height: 1.9;
+}
+
+.payment .paymentHistory .payDone:hover {
+  color: #009ee3;
+}
+
+.payment .paymentHistory .payDone svg {
+  color: #0a9006;
+  font-size: 19px;
+  vertical-align: sub;
+}
+
+.payment .logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #d7d7d7;
+}
+
+.payment .logout svg {
+  font-size: 18px;
+}
+
+.payment .logout:hover {
+  background-color: #ffffff49;
+}
+
+.payment .modalPayment {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000037;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999999;
+}
+
+.payment .modalPayment .stage-1,
+.payment .modalPayment .stage-2 {
+  width: 100%;
+  max-width: 670px;
+  background-color: #fff;
+  padding: 20px;
+  color: #000;
+  position: relative;
+  display: block;
+  overflow: auto;
+  gap: 15px;
+  border-radius: 4px;
+}
+
+.payment .modalPayment .stage-1 h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.payment .modalPayment .stage-1 p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #da1a29;
+  line-height: 2;
+}
+
+.payment .modalPayment .stage-1 form {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 7px;
+}
+
+.payment .modalPayment .stage-1 form input,
+.payment .modalPayment .stage-1 form select {
+  border: 1px solid #e3e3e3;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+.payment .modalPayment .stage-1 form label {
+  width: 100%;
+  padding: 10px;
+  font-size: 13px;
+  position: relative;
+  line-height: 2;
+}
+
+.payment .modalPayment .stage-1 form input[type='submit'] {
+  background-color: #009ee3;
+  color: #e3e3e3;
+  font-size: 17px;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00000041;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.payment .modalPayment .stage-1 form input[type='submit']:hover {
+  background-color: #0791cc;
+}
+
+.payment .modalPayment .stage-1 form input[type='reset'] {
+  border: 2px solid #009ee3;
+  color: #333;
+  font-size: 17px;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00000041;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.payment .modalPayment .stage-1 form input[type='reset']:hover {
+  border: 2px dashed #0791cc;
+}
+
+.payment .modalPayment .stage-2 img {
+  position: relative;
+  display: block;
+  width: 270px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.payment .modalPayment .stage-2 h2 {
+  position: relative;
+  display: block;
+  width: 270px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.payment .modalPayment .stage-2 p {
+  position: relative;
+  display: block;
+  width: 270px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.payment .modalPayment .stage-2 button {
+  border: 2px solid #009ee3;
+  color: #333;
+  font-size: 17px;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00000041;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 0.4s all;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.payment .modalPayment .promotion {
+  width: 100%;
+  background-color: #da1a29;
+  color: #f2c913;
+  padding: 7px;
+}
+
+@media only screen and (max-width: 570px) {
+  .payment .modalPayment .stage-1 form {
+    grid-template-columns: auto;
+  }
+}

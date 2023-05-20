@@ -1,0 +1,567 @@
+.panelConatiner {
+  width: 100%;
+  min-height: 100vh;
+  background: #e3e3e3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 15px;
+}
+.panelConatiner .panelHeader {
+  width: 100%;
+  padding: 10px 20px;
+  background: #000;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.panelConatiner .panelHeader h1 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  width: 120px;
+}
+
+.panelConatiner .panelHeader h1 img {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.panelConatiner .panelHeader .menu {
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  position: relative;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.5s all ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panelConatiner .panelHeader .menu svg {
+  transition: 0.5s all ease-in;
+}
+
+.panelConatiner .panelHeader .menu:hover svg {
+  color: #d30000;
+  text-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
+}
+
+.panelConatiner .menuPanel {
+  width: 100%;
+  max-width: 270px;
+  height: 100%;
+  padding: 10px 20px;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: -500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: 0.3s all;
+  gap: 20px;
+  z-index: 100000;
+  overflow: auto;
+}
+.panelConatiner .menuPanel #close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.panelConatiner .menuPanel #close svg {
+  stroke: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+.panelConatiner .menuPanel #close:hover svg {
+  color: #d30000;
+}
+
+.panelConatiner .menuPanel #logout {
+  position: relative;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 7px;
+}
+.panelConatiner .menuPanel #logout svg {
+  stroke: #ffffff;
+  font-size: 22px;
+}
+.panelConatiner .menuPanel #logout:hover {
+  color: #d30000;
+}
+
+.panelConatiner .menuPanel a {
+  position: relative;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.4s all;
+  background-color: #d30000;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.panelConatiner .menuPanel a:hover {
+  color: #f4da1a;
+  font-size: 500;
+  box-shadow: 0 0 30px rgb(90, 90, 90);
+}
+
+.panelConatiner .showMenu {
+  left: 0px;
+}
+
+.panelConatiner .menuPanel .infoUser {
+  width: 100%;
+  position: relative;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panelConatiner .menuPanel .infoUser ul {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.panelConatiner .formConatiner {
+  width: 96%;
+  max-width: 1080px;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.panelConatiner .formConatiner h1,
+.panelConatiner .formConatiner h2 {
+  font-size: 23px;
+  color: #ddd;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(to right, #000, #d30000);
+  padding: 10px;
+}
+
+.panelConatiner .formConatiner .warning {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  border: 2px dashed #d30000;
+}
+
+.panelConatiner .formConatiner .warning a {
+  font-size: 13px;
+  color: #cd1d1d;
+}
+
+.panelConatiner .formConatiner form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.panelConatiner .formConatiner form label {
+  font-size: 17px;
+  color: #333;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+}
+
+.panelConatiner .formConatiner form input,
+.panelConatiner .formConatiner form textarea,
+.panelConatiner .formConatiner form select {
+  color: #333;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+.panelConatiner .formConatiner form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.panelConatiner .formConatiner form small {
+  color: #000;
+}
+
+.panelConatiner .formConatiner form input:focus,
+.panelConatiner .formConatiner form select:focus {
+  box-shadow: 0 0 10px #3333333d;
+}
+
+.panelConatiner .formConatiner form button {
+  color: #d30000;
+  font-size: 17px;
+  background-color: #fff;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.panelConatiner .formConatiner form button:hover {
+  background-color: #e3e3e3;
+  box-shadow: 0 0 10px #3333333d;
+}
+
+.panelConatiner .formConatiner form button:active {
+  background-color: #50d992;
+  box-shadow: 0 0 10px #3333333d;
+}
+
+.panelConatiner .formConatiner output {
+  color: #cd1d1d;
+  font-weight: 600;
+  padding: 10px;
+  display: none;
+  position: relative;
+  font-size: 16px;
+}
+
+.panelConatiner .formConatiner p {
+  color: #cd1d1d;
+  font-weight: 500;
+  padding: 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+.panelConatiner .formConatiner .msgs {
+  background-color: #d50a28 !important;
+  border: 2px dashed #000000;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+  display: none;
+  position: sticky;
+  top: 0;
+  font-size: 14px;
+  z-index: 9999;
+  animation: msgs 1s;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #0000005f;
+}
+
+@keyframes msgs {
+  from {
+    transform: scale(1.0001);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.panelConatiner .formConatiner .deleteContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.panelConatiner .formConatiner .deleteContainer li {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #e3e3e3;
+  padding: 10px;
+}
+
+.panelConatiner .formConatiner .deleteContainer li:hover {
+  border: 2px solid #da1a29;
+}
+
+.panelConatiner .formConatiner .deleteContainer li p {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #e3e3e3;
+  padding: 10px;
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.panelConatiner .formConatiner .deleteContainer li img,
+.panelConatiner .formConatiner .deleteContainer li video {
+  width: 100%;
+  max-width: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.panelConatiner .formConatiner .deleteContainer li a {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #da1a29;
+  padding: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.panelConatiner .formConatiner .deleteContainer li a:hover {
+  background-color: #f4da1a;
+  color: #333;
+}
+
+.panelConatiner .finaleRegister {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.panelConatiner .finaleRegister a {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #0b2cc0;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00000032;
+}
+
+.panelConatiner .finaleRegister a:hover {
+  box-shadow: 0 0 30px #00000051;
+}
+
+#formandress {
+  background-color: #038140;
+  box-shadow: 0 0 30px #3333333d;
+}
+
+.effectFade {
+  animation: fade 2s;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: 0.6s all;
+}
+
+.dropdown ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 0px;
+  margin-top: -10px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.9s all;
+}
+
+.dropdown ul li {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.dropdown ul li a {
+  font-size: 14px;
+}
+
+.expand ul {
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: 0.9s all;
+}
+
+.dropdown button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: 2s all;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.panelConatiner .photosShow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 230px);
+  gap: 10px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.panelConatiner .photosShow img {
+  display: block;
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+  height: 230px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .panelConatiner .photosShow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    gap: 10px;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .panelConatiner .photosShow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    gap: 10px;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .panelConatiner .photosShow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 230px);
+    gap: 10px;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .panelConatiner .formConatiner .deleteContainer li {
+    flex-wrap: wrap;
+  }
+  .panelConatiner .formConatiner .deleteContainer li a {
+    width: 100%;
+  }
+}

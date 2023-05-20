@@ -1,0 +1,45 @@
+.epp{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.epp h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: black;
+  padding: 10px;
+  font-size: 27px;
+}
+
+.epp p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: #d80101;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.epp a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  background-color: #0a3edb;
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+}
+
+

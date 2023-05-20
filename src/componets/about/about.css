@@ -1,0 +1,79 @@
+.aboutContainer{
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.aboutContainer article{
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--black);
+  padding: 20px;
+  gap: 15px;
+  border-radius: 0 0 4px 4px;
+}
+
+.aboutContainer article h1{
+  color: var(--red);
+  font-size: 30px;
+}
+
+.aboutContainer article h2{
+  color: var(--red);
+  font-size: 18px;
+}
+
+.aboutContainer article p{
+  color: var(--white);
+  font-size: 14px;
+}
+
+.aboutContainer article p a{
+  color: var(--red);
+  font-size: 16px;
+}
+
+.aboutContainer .top{
+  background-image: url(../../assets/imgs/bg-pages.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  border-radius: 4px 4px 0 0;
+}
+
+.aboutContainer .top h2{
+  font-size: 38px;
+  color: var(--white);
+}
+
+.aboutContainer .top svg{
+  font-size: 50px;
+  color: var(--white);
+}
+
+@media only screen and (max-width: 460px) {
+  .aboutContainer article, .aboutContainer .top{
+    width: 100%;
+  }
+
+  .aboutContainer{
+    padding: 10px;
+  }
+}

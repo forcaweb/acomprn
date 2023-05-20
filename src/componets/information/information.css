@@ -1,0 +1,204 @@
+.infoContainer {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.419);
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.infoContainer article {
+  width: 90%;
+  background-color: var(--black);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.419);
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 30px;
+}
+
+.infoContainer article h1,
+.infoContainer article h2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 36px;
+  color: var(--red);
+}
+
+.infoContainer article p {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.infoContainer article .noGap {
+  gap: 2px;
+}
+
+.infoContainer article p small {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--red);
+  font-size: 16px;
+  flex: 100%;
+}
+
+.infoContainer article p small span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.infoContainer article .imgs {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 5px;
+}
+
+.infoContainer article .imgs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoContainer article .video {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 5px;
+}
+
+.infoContainer article .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoContainer article .contact {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.infoContainer article .contact nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.infoContainer article .contact nav label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  gap: 10px;
+  padding: 10px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.infoContainer article .contact nav a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--white);
+  gap: 10px;
+  background-color: var(--red);
+  padding: 20px 10px;
+  transition: 0.4s all;
+}
+
+.infoContainer article .contact nav a:hover {
+  background-color: #058b22;
+}
+
+.infoContainer article .contact nav label svg {
+  color: #058b22;
+  font-size: 30px;
+}
+
+.infoContainer article .contact p {
+  padding: 10px 0;
+  font-size: 17px;
+  color: #f69a0b;
+}
+
+@media only screen and (max-width: 950px) {
+  .infoContainer article .imgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .infoContainer article .video {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .infoContainer {
+    padding: 10px;
+  }
+  .infoContainer article {
+    width: 100%;
+    padding: 16px;
+  }
+  .infoContainer article p small span {
+    flex: auto;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .infoContainer article .imgs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .infoContainer article .video {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

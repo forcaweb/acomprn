@@ -1,0 +1,42 @@
+.search{
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search .errorSearch{
+  width: 100%;
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+}
+
+.search .errorSearch h3{
+  font-size: 35px;
+  color: #da1a29;
+}
+
+.showmore{
+  position: relative;
+  display: block;
+  width: 100%;
+  flex: 100%;
+  font-size: 16px;
+  font-family: Montserrat-bold;
+  color: var(--white);
+  padding: 10px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+
+.showmore:hover{
+  background-color: var(--red);
+}

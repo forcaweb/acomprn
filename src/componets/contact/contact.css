@@ -1,0 +1,147 @@
+.contactContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.contactContainer div {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--black);
+  padding: 20px;
+  gap: 15px;
+}
+
+.contactContainer div h2 {
+  font-size: 28px;
+  color: var(--red);
+  position: relative;
+  display: block;
+}
+
+.contactContainer div nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 3px;
+  padding: 0 30px;
+}
+
+.contactContainer div nav li a {
+  font-size: 12px;
+  color: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.contactContainer div nav li:hover {
+  background-color: #555555;
+  border-radius: 4px;
+}
+
+.contactContainer div nav li a svg {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 60px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.contactContainer div nav li a span {
+  color: var(--red);
+  font-size: 19px;
+}
+
+.contactContainer div p {
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+}
+
+.contactContainer div small {
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  text-align: left;
+  color: #ce9f06;
+}
+
+.contactContainer .top {
+  background-image: url(../../assets/imgs/bg-pages.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactContainer .top h1 {
+  font-size: 38px;
+  color: var(--white);
+}
+
+.contactContainer .top svg {
+  font-size: 35px;
+  color: var(--white);
+}
+
+@media only screen and (max-width: 470px) {
+  .contactContainer div,
+  .contactContainer .top {
+    width: 100%;
+  }
+
+  .contactContainer {
+    padding: 10px;
+  }
+
+  .contactContainer div nav {
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .contactContainer div nav li a svg {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .contactContainer div nav {
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .contactContainer div nav {
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+}

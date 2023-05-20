@@ -1,0 +1,38 @@
+User-agent: Googlebot
+Disallow: /panel/*
+
+User-agent: 008
+Disallow: /panel/*
+
+User-agent: SiteAuditBot
+Disallow: /panel/*
+
+User-agent: Semrushbot-SI
+Disallow: /panel/*
+
+User-agent: Yahoo Pipes 2.0
+Disallow: /panel/*
+
+User-agent: Facebot
+Disallow: /panel/*
+
+User-agent: Bingbot
+Disallow: /panel/*
+
+User-agent: BingPreview
+Disallow: /panel/*
+
+
+User-agent: *
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
+Disallow: /info/*
+Disallow: /acompanhantes-mulheres/*
+Allow: /
+
+
+Sitemap: https://acompanhantesdorn.com.br/sitemap.xml

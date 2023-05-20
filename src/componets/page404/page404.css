@@ -1,0 +1,49 @@
+.error404{
+  width: 100%;
+  height: 100vh;
+  background: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.error404 h2{
+  color: #fff;
+  font-size: 70px;
+  font-weight: 500;
+  animation: ani 1s;
+}
+
+.error404 p{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  animation: ani 1s;
+}
+
+.error404 svg{
+  color: #fff;
+  font-size: 170px;
+  animation: ani 1s;
+}
+
+@keyframes ani {
+  0%{
+    opacity: 0%;
+    filter: blur(200px);
+  }
+  50%{
+    opacity: 50%;
+    filter: blur(100px);
+  }
+  70%{
+    opacity: 70%;
+    filter: blur(50px);
+  }
+  100%{
+    opacity: 100%;
+    filter: blur(0);
+  }
+}

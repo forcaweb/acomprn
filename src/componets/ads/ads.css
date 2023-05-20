@@ -1,0 +1,136 @@
+.adsContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.adsContainer div {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--black);
+  padding: 20px;
+  gap: 10px;
+}
+
+.adsContainer .top {
+  background-image: url(../../assets/imgs/bg-pages.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.adsContainer .top h2 {
+  font-size: 38px;
+  color: var(--white);
+}
+
+.adsContainer .top svg {
+  font-size: 50px;
+  color: var(--white);
+}
+
+.adsContainer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.adsContainer div h2 {
+  font-size: 27px;
+  color: var(--red);
+  position: relative;
+  display: block;
+}
+
+.adsContainer div nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.adsContainer div nav li a {
+  font-size: 16px;
+  color: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.adsContainer div nav li:hover {
+  background-color: #555555;
+  border-radius: 4px;
+}
+
+.adsContainer div nav li a span {
+  color: var(--red);
+  font-size: 19px;
+}
+.adsContainer div p {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.adsContainer div a {
+  font-size: 15px;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 7px;
+  transition: 0.3s all;
+  border-radius: 4px;
+  display: block;
+  position: relative;
+}
+
+.adsContainer div a:hover {
+  background-color: #3b0303;
+}
+
+.adsContainer div a svg {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 40px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.adsContainer div a svg:hover {
+  background-color: #058b22;
+}
+
+@media only screen and (max-width: 460px) {
+  .adsContainer div {
+    width: 100%;
+  }
+
+  .adsContainer {
+    padding: 10px;
+  }
+}

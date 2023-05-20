@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Noto-l;
+  src: url(./assets/font/NotoSans-Light.ttf);
+}
+
+@font-face {
+  font-family: Noto-sb;
+  src: url(./assets/font/NotoSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Noto-b;
+  src: url(./assets/font/NotoSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: Noto-eb;
+  src: url(./assets/font/NotoSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Noto-r;
+  src: url(./assets/font/NotoSans-Regular.ttf);
+}
+
+body {
+  min-height: 100vh;
+  color: #000;
+  font-family: Noto-r;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #cc0c23;
+  --pink-dark: #5c0639;
+  --pink: #db0d86;
+}
+
+.fadeEffect {
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background: #f4f4f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #da1a29;
+}
