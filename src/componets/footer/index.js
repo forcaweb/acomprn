@@ -6,16 +6,15 @@ export default function Footer() {
     <footer className="footerContainer">
       <div className="content">
         <p>
-          <strong>As chiques de Brasilia</strong>, as melhores acompanhantes
+          <strong>Acompanhantes do RN</strong>, as melhores acompanhantes do RN
           estão aqui. Sinta-se em casa e escolha o melhor prato de nosso buffet.
-          Mulheres lindas de todas etnias. Este site é conteúdo adulto. Qualquer
-          uso de menores de idade, não será responsabilidade nossa.
+          Mulheres lindas de todas etnias.
         </p>
       </div>
       <div className="credit">
         <p>
-          Todos os direitos reservados: As chiques de Brasilia. Site
-          desenvolvido por <a href="https://forcaweb.net">Força Web</a>.
+          Todos os direitos reservados: Acompanhantes do RN. Site desenvolvido
+          por <a href="https://forcaweb.net">Força Web</a>.
         </p>
       </div>
     </footer>

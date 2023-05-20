@@ -48,6 +48,7 @@ body {
   --red: #cc0c23;
   --pink-dark: #5c0639;
   --pink: #db0d86;
+  --yellow: #ffbd08;
 }
 
 .fadeEffect {
@@ -71,5 +72,5 @@ body {
   background: #f4f4f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #da1a29;
+  background: --pink;
 }

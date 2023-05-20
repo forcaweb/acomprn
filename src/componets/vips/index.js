@@ -28,13 +28,22 @@ export default function Vips() {
   return (
     <main className="vipsContainer">
       <Swiper
-        pagination={{
-          clickable: true
-        }}
+        speed={600}
         autoplay={{
           delay: 5000
         }}
-        loop
+        spaceBetween={10}
+        breakpoints={{
+          640: {
+            slidesPerView: 2
+          },
+          768: {
+            slidesPerView: 4
+          },
+          1024: {
+            slidesPerView: 5
+          }
+        }}
         modules={[Pagination, Autoplay]}
         className="mySwiper">
         {userPremiumData.map((itens) =>
@@ -66,26 +75,6 @@ export default function Vips() {
                     <strong>Garota Premium</strong>.
                   </small>
                   <h2>{itens.name}</h2>
-                  <p className="biography">
-                    <strong>Biografia:</strong>
-                    {itens.biography}
-                  </p>
-                  <p>
-                    <strong>Idade:</strong>
-                    {itens.age} anos.
-                  </p>
-                  <p>
-                    <strong>Cidade/Estado:</strong>
-                    {itens.andressrelations[0].andress.city_and_state}
-                  </p>
-                  <p>
-                    <strong>Altura:</strong>
-                    {itens.height} cm.
-                  </p>
-                  <p>
-                    <strong>Peso:</strong>
-                    {itens.weight} kg.
-                  </p>
                   <a
                     href={`/${itens.callTypesrelations[0].typecall.name
                       .replaceAll(' ', '-')
