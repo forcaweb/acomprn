@@ -76,6 +76,7 @@
   gap: 20px;
   z-index: 100000;
   overflow: auto;
+  color: var(--white);
 }
 .panelConatiner .menuPanel #close {
   position: absolute;
@@ -151,6 +152,7 @@
   width: 100%;
   position: relative;
   background-color: #333;
+  color: var(--white);
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -190,7 +192,7 @@
   font-weight: 500;
   width: 100%;
   position: relative;
-  background: linear-gradient(to right, #000, #d30000);
+  background: linear-gradient(to right, var(--black), var(--pink));
   padding: 10px;
 }
 
@@ -201,12 +203,12 @@
   width: 100%;
   position: relative;
   padding: 10px;
-  border: 2px dashed #d30000;
+  border: 2px dashed var(--red);
 }
 
 .panelConatiner .formConatiner .warning a {
   font-size: 13px;
-  color: #cd1d1d;
+  color: var(--red);
 }
 
 .panelConatiner .formConatiner form {
@@ -254,7 +256,7 @@
 }
 
 .panelConatiner .formConatiner form button {
-  color: #d30000;
+  color: var(--red);
   font-size: 17px;
   background-color: #fff;
   font-weight: 500;
@@ -277,7 +279,7 @@
 }
 
 .panelConatiner .formConatiner output {
-  color: #cd1d1d;
+  color: var(--red);
   font-weight: 600;
   padding: 10px;
   display: none;
@@ -286,7 +288,7 @@
 }
 
 .panelConatiner .formConatiner p {
-  color: #cd1d1d;
+  color: var(--red);
   font-weight: 500;
   padding: 10px;
   position: relative;
@@ -294,7 +296,7 @@
 }
 
 .panelConatiner .formConatiner .msgs {
-  background-color: #d50a28 !important;
+  background-color: var(--red) !important;
   border: 2px dashed #000000;
   color: #ffffff;
   font-weight: 500;
@@ -340,7 +342,7 @@
 }
 
 .panelConatiner .formConatiner .deleteContainer li:hover {
-  border: 2px solid #da1a29;
+  border: 2px solid var(--red);
 }
 
 .panelConatiner .formConatiner .deleteContainer li p {
@@ -380,7 +382,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: #da1a29;
+  background-color: var(--red);
   padding: 10px;
   color: #fff;
   font-size: 17px;

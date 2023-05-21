@@ -1,4 +1,4 @@
-.aboutContainer{
+.aboutContainer {
   width: 100%;
   position: relative;
   min-height: 100vh;
@@ -7,43 +7,44 @@
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
+  background-color: #e3e3e3;
 }
 
-.aboutContainer article{
+.aboutContainer article {
   width: 90%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  background-color: var(--black);
+  background-color: var(--white);
   padding: 20px;
   gap: 15px;
   border-radius: 0 0 4px 4px;
 }
 
-.aboutContainer article h1{
-  color: var(--red);
+.aboutContainer article h1 {
+  color: var(--pink-dark);
   font-size: 30px;
 }
 
-.aboutContainer article h2{
-  color: var(--red);
+.aboutContainer article h2 {
+  color: var(--pink-dark);
   font-size: 18px;
 }
 
-.aboutContainer article p{
-  color: var(--white);
+.aboutContainer article p {
+  color: var(--black);
   font-size: 14px;
 }
 
-.aboutContainer article p a{
+.aboutContainer article p a {
   color: var(--red);
   font-size: 16px;
 }
 
-.aboutContainer .top{
-  background-image: url(../../assets/imgs/bg-pages.png);
+.aboutContainer .top {
+  background-image: url(../../assets/imgs/bg-pages.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -58,22 +59,23 @@
   border-radius: 4px 4px 0 0;
 }
 
-.aboutContainer .top h2{
+.aboutContainer .top h2 {
   font-size: 38px;
   color: var(--white);
 }
 
-.aboutContainer .top svg{
+.aboutContainer .top svg {
   font-size: 50px;
   color: var(--white);
 }
 
 @media only screen and (max-width: 460px) {
-  .aboutContainer article, .aboutContainer .top{
+  .aboutContainer article,
+  .aboutContainer .top {
     width: 100%;
   }
 
-  .aboutContainer{
+  .aboutContainer {
     padding: 10px;
   }
 }

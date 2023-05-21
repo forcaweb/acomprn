@@ -17,7 +17,7 @@ export default function Header() {
       <nav>
         <li>
           <a href="/" id="logo" title="Logo oficial" alt="Logo oficial">
-            <img src="../imgs/logo.png" alt="Logo" />
+            <img src={`${process.env.PUBLIC_URL}/imgs/logo.png`} alt="Logo" />
           </a>
         </li>
       </nav>

@@ -46,12 +46,9 @@ export default function Notice() {
         </button>
         <a
           href="https://wa.me/5561982706346?text=Ol%C3%A1%2C+tudo+bem%3F+quero+falar+com+um+atendente."
-          aria-label="Promoção de 2023 as chiques de brasilía DF"
-          title="Promoção de 2023 as chiques de brasilía DF">
-          <img
-            src="./imgs/notice.jpg"
-            alt="Promoção de 2023 as chiques de brasilía DF"
-          />
+          aria-label="Promoção Acompanhantes do RN"
+          title="Promoção Acompanhantes do RN">
+          <img src="./imgs/notice.jpg" alt="Promoção Acompanhantes do RN" />
         </a>
       </div>
     </div>

@@ -22,7 +22,8 @@ export default function WarningSite() {
           <h2>Aviso: Políticas de Privacidade</h2>
           <p>
             Ao clicar em concordo, você está de acordo que o site
-            aschiquesdebsb.com.br, pode salvar seus dados em cookies e sessões.
+            acompanhantesdorn.com.br, pode salvar seus dados em cookies e
+            sessões.
           </p>
         </div>
         <div className="question">

@@ -47,8 +47,9 @@ export default function Panel() {
     return p;
   };
   const [userData, setUserData] = React.useState([]);
-  document.querySelector('title').innerText =
-    'Painel de controle - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Painel de controle - ${process.env.REACT_APP_URL_DOMINIO}`;
   document.querySelector('head').innerHTML +=
     '<style> .headerContainer{display: none !important;} </style>';
   document.getElementsByTagName(
@@ -95,7 +96,7 @@ export default function Panel() {
         <h1 aria-label="Titlle Page">
           <a href="/panel" aria-label="pagina inicial painel">
             <img
-              src={`${process.env.REACT_APP_URL_BASE}/imgs/logo.svg`}
+              src={`${process.env.PUBLIC_URL}/imgs/logo.png`}
               alt="Logo website"
             />
           </a>

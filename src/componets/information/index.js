@@ -61,7 +61,7 @@ export default function Information() {
       .replace(/(-\d{4})\d+?$/, '$1');
     document.querySelector(
       'title'
-    ).innerHTML = `${userData[0].name}, ${userData[0].age} anos, Contato: ${num}, Acompnhantes de Brasília - As Chiques de Brasília.`;
+    ).innerHTML = `${userData[0].name}, ${userData[0].age} anos, Contato: ${num}, ${process.env.REACT_APP_URL_DOMINIO}.`;
   }
   return (
     <div>

@@ -8,7 +8,7 @@ export default function Sociais() {
       <div className="title">Siga-nos</div>
       <div className="twitter">
         <a
-          href="https://twitter.com/aschiquesdebsb"
+          href="/"
           target="blank"
           aria-label="Seguir no Twitter"
           title="Seguir no Twitter">
@@ -17,7 +17,7 @@ export default function Sociais() {
       </div>
       <div className="inst">
         <a
-          href="https://www.instagram.com/aschiquesdebrasilia"
+          href="/"
           target="blank"
           aria-label="Seguir no Instagram"
           title="Seguir no Instagram">

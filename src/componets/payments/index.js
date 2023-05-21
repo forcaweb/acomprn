@@ -8,8 +8,9 @@ export default function LoginPayment() {
   const tokenpaymentstatment = localStorage.getItem('tokenpayment')
     ? localStorage.getItem('tokenpayment')
     : null;
-  document.querySelector('title').innerText =
-    'Login Pagamento - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Login Pagamento - ${process.env.REACT_APP_URL_DOMINIO}`;
   document.getElementsByTagName(
     'head'
   )[0].innerHTML += `<meta http-equiv="cache-control" content="max-age=0" />
@@ -70,7 +71,7 @@ export default function LoginPayment() {
         <div className="bg">
           <h1>
             <img
-              src={`${process.env.REACT_APP_URL_BASE}/imgs/bg-login.jpg`}
+              src="../imgs/bg-login.jpg"
               alt="bg login form"
               decoding="async"
             />

@@ -6,8 +6,9 @@ import './search.css';
 import { useParams } from 'react-router-dom';
 
 export default function SearchAds() {
-  document.querySelector('title').innerText =
-    'Pesquisar - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Pesquisar - ${process.env.REACT_APP_URL_DOMINIO}`;
   const [usersLastPost, setUsersLastPost] = React.useState([]);
 
   const { qadrs, qtc } = useParams();

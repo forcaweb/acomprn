@@ -4,8 +4,9 @@ import * as IconMd from 'react-icons/md';
 import './contact.css';
 
 export default function Contact() {
-  document.querySelector('title').innerText =
-    'Nossos Contatos - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Nossos Contatos - ${process.env.REACT_APP_URL_DOMINIO}`;
   return (
     <main className="contactContainer">
       <div className="top">
@@ -27,45 +28,33 @@ export default function Contact() {
       <div>
         <nav>
           <li>
-            <a
-              href="tel:+5561982706346"
-              aria-label="phone contact"
-              title="phone contact">
+            <a href="tel:+" aria-label="phone contact" title="phone contact">
               <IconFa.FaPhone />
               Telefone
             </a>
           </li>
           <li>
             <a
-              href="mailto:aschiquesdebsbanuncios@gmail.com"
+              href="mailto:acompanhantesdorn@gmail.com"
               aria-label="E-mail"
               title="E-mail">
               <IconMd.MdAlternateEmail /> E-mail
             </a>
           </li>
           <li>
-            <a
-              href="https://wa.me/5561982706346?text=Ol%C3%A1%2C+tudo+bem%3F+quero+falar+com+um+atendente."
-              aria-label="Chat on Whatsapp"
-              title="Chat on Whatsapp">
+            <a href="/" aria-label="Chat on Whatsapp" title="Chat on Whatsapp">
               <IconFa.FaWhatsapp />
               Whatsapp
             </a>
           </li>
           <li>
-            <a
-              href="https://www.instagram.com/aschiquesdebrasilia/"
-              aria-label="Instagram"
-              title="Instagram">
+            <a href="/" aria-label="Instagram" title="Instagram">
               <IconFa.FaInstagram />
               Instagram
             </a>
           </li>
           <li>
-            <a
-              href="https://twitter.com/aschiquesdebsb"
-              aria-label="Twitter"
-              title="Twitter">
+            <a href="/" aria-label="Twitter" title="Twitter">
               <IconFa.FaTwitter />
               Twitter
             </a>

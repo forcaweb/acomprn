@@ -1,4 +1,4 @@
-.epp{
+.epp {
   display: flex;
   min-height: 100vh;
   justify-content: center;
@@ -6,31 +6,32 @@
   flex-direction: column;
   width: 100%;
   position: relative;
+  color: var(--white);
 }
 
-.epp h1{
+.epp h1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 400px;
-  background-color: black;
+  background-color: var(--black);
   padding: 10px;
   font-size: 27px;
 }
 
-.epp p{
+.epp p {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 400px;
-  background-color: #d80101;
+  background-color: var(--red);
   padding: 10px;
   font-size: 20px;
 }
 
-.epp a{
+.epp a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,5 +42,3 @@
   font-size: 17px;
   color: #fff;
 }
-
-

@@ -4,8 +4,9 @@ import * as IconFa from 'react-icons/fa';
 import './ads.css';
 
 export default function AdsClient() {
-  document.querySelector('title').innerText =
-    'Anuncie agora! - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Anuncie agora! - ${process.env.REACT_APP_URL_DOMINIO}`;
   return (
     <main className="adsContainer">
       <div className="top">
@@ -21,7 +22,8 @@ export default function AdsClient() {
         <h2>Contatos:</h2>
 
         <a
-          href="https://wa.me/5561981936266?text=Ol%C3%A1%2C+tudo+bem%3F+quero+falar+com+um+atendente."
+          id="wts"
+          href="/"
           aria-label="Chat on Whatsapp"
           title="Chat on Whatsapp">
           <IconFa.FaWhatsapp />

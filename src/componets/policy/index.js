@@ -3,8 +3,9 @@ import * as IconsMd from 'react-icons/md';
 import './policy.css';
 
 export default function PrivacyPolicy() {
-  document.querySelector('title').innerText =
-    'Políticas & Privacidade - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Políticas & Privacidade - ${process.env.REACT_APP_URL_DOMINIO}`;
   return (
     <main className="policyContainer">
       <div className="top">
@@ -14,7 +15,7 @@ export default function PrivacyPolicy() {
       <article>
         <h1>Quem somos</h1>
         <small>
-          O endereço do nosso site é: {process.env.REACT_APP_URL_BASE}.
+          O endereço do nosso site é: {process.env.REACT_APP_URL_DOMINIO}.
         </small>
 
         <h2>Clientes</h2>

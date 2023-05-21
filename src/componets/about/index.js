@@ -3,8 +3,9 @@ import * as IconsMd from 'react-icons/md';
 import './about.css';
 
 export default function About() {
-  document.querySelector('title').innerText =
-    'Sobre nós - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Sobre nós - ${process.env.REACT_APP_URL_DOMINIO}`;
   return (
     <main className="aboutContainer">
       <div className="top">

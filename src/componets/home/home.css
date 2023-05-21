@@ -219,9 +219,10 @@
 
 .content .cardContainer .card .premium_icon {
   background-color: #000;
+  color: var(--yellow);
   position: absolute;
   top: 0;
-  right: -65px;
+  right: -60px;
   padding: 2px;
   width: 100px;
   display: flex;
@@ -229,7 +230,7 @@
   align-items: center;
   gap: 8px;
   padding: 4px;
-  border-radius: 0 0 0 2px;
+  border-radius: 10px 0 0 10px;
   transition: 0.4s all;
   font-size: 12px;
 }
@@ -241,6 +242,7 @@
 
 .content .cardContainer .card .vip_icon {
   background-color: #000;
+  color: var(--white);
   position: absolute;
   top: 0;
   right: -24px;
@@ -251,7 +253,7 @@
   align-items: center;
   gap: 8px;
   padding: 4px;
-  border-radius: 0 0 0 2px;
+  border-radius: 10px 0 0 10px;
   transition: 0.4s all;
   font-size: 11px;
 }
@@ -263,9 +265,10 @@
 
 .content .cardContainer .card .new_icons {
   background-color: #000;
+  color: var(--white);
   position: absolute;
   top: 0;
-  right: -70px;
+  right: -65px;
   padding: 2px;
   width: 100px;
   display: flex;
@@ -273,7 +276,7 @@
   align-items: center;
   gap: 8px;
   padding: 4px;
-  border-radius: 0 0 0 2px;
+  border-radius: 10px 0 0 10px;
   transition: 0.4s all;
   font-size: 13px;
 }

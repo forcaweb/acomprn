@@ -4,7 +4,7 @@ import './page404.css';
 
 export default function Page404() {
   document.querySelector('title').innerText =
-    'Error 404 - aschiquesdebsb.com.br';
+    'Error 404 - acompanhantesdorn.com.br';
   return (
     <main className="error404">
       <IconsBi.BiErrorAlt />

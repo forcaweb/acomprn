@@ -5,7 +5,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: var(--black);
+  background-color: #e3e3e3;
 }
 
 .loginContainer .box {
@@ -44,7 +44,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #da1a29, #000);
+  background: linear-gradient(to right, var(--pink), var(--black));
   overflow: hidden;
   height: 370px;
   width: 100%;

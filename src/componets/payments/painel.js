@@ -156,8 +156,9 @@ export default function PainelPayment() {
     }
   };
 
-  document.querySelector('title').innerHTML =
-    'Pagamentos As Chiques de Brasília';
+  document.querySelector(
+    'title'
+  ).innerHTML = `Pagamentos ${process.env.REACT_APP_URL_DOMINIO}`;
   document.getElementsByTagName(
     'head'
   )[0].innerHTML += `<meta http-equiv="cache-control" content="max-age=0" />

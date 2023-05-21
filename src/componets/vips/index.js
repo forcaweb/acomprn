@@ -44,6 +44,7 @@ export default function Vips() {
             slidesPerView: 5
           }
         }}
+        loop
         modules={[Pagination, Autoplay]}
         className="mySwiper">
         {userPremiumData.map((itens) =>
@@ -78,10 +79,9 @@ export default function Vips() {
                   <a
                     href={`/${itens.callTypesrelations[0].typecall.name
                       .replaceAll(' ', '-')
-                      .toLowerCase()}/${itens.id}/${itens.name.replaceAll(
-                      ' ',
-                      '-'
-                    )}`}>
+                      .toLowerCase()}/${itens.id}/${itens.name
+                      .replaceAll(' ', '-')
+                      .toLowerCase()}`}>
                     Ver Perfil
                   </a>
                 </div>

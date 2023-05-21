@@ -7,8 +7,9 @@ import LoadingPages from '../loading';
 export default function Login() {
   const [loadingPages, setLoadingPages] = React.useState(false);
   const [showPass, setShowPass] = React.useState({ ative: false });
-  document.querySelector('title').innerText =
-    'Faça seu login - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Faça seu login - ${process.env.REACT_APP_URL_DOMINIO}`;
   const [token, setToken] = !localStorage.getItem('token')
     ? React.useState(null)
     : React.useState(localStorage.getItem('token'));
@@ -76,7 +77,7 @@ export default function Login() {
         <div className="bg">
           <h1>
             <img
-              src={`${process.env.REACT_APP_URL_BASE}/imgs/bg-login.jpg`}
+              src="../imgs/bg-login.jpg"
               alt="bg login form"
               decoding="async"
             />

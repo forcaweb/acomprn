@@ -5,8 +5,9 @@ import LoadingPages from '../loading';
 
 export default function TokenPayment() {
   const [loadingPages, setLoadingPages] = React.useState(false);
-  document.querySelector('title').innerText =
-    'Token Pagamento - aschiquesdebsb.com.br';
+  document.querySelector(
+    'title'
+  ).innerText = `Token Pagamento - ${process.env.REACT_APP_URL_DOMINIO}`;
   document.getElementsByTagName(
     'head'
   )[0].innerHTML += `<meta http-equiv="cache-control" content="max-age=0" />

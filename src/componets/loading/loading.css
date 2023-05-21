@@ -13,11 +13,12 @@
   padding: 10px;
   border-radius: 4px;
   box-shadow: 0 0 10px #0000006f;
-  background-color: #c60101;
+  background-color: var(--red);
   position: relative;
   display: flex;
   justify-items: center;
   align-items: center;
+  color: var(--white);
 }
 
 .loadingpages div svg {
