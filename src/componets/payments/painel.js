@@ -459,15 +459,11 @@ export default function PainelPayment() {
 
                 <div className="camps_pay">
                   <label htmlFor="packages">Escolha um pacote</label>
-                  <small className="promotion">Promoção até Dezembro</small>
+                  {/* <small className="promotion">Promoção até Dezembro</small> */}
                   <select name="packages" id="packages">
-                    <option value="1">
-                      Pacote Padrão: R$ 100,00 por R$ 50,00
-                    </option>
-                    <option value="2">Pacote Vip: R$ 150 por R$ 75,00</option>
-                    <option value="3">
-                      Pacote Premium: R$ 250 por R$ 125,00
-                    </option>
+                    <option value="1">Pacote Padrão: R$ 50,00</option>
+                    <option value="2">Pacote Vip: R$ 100,00</option>
+                    <option value="3">Pacote Premium: R$ 200,00</option>
                   </select>
                 </div>
 

@@ -71,7 +71,7 @@ export default function LoginPayment() {
         <div className="bg">
           <h1>
             <img
-              src="../imgs/bg-login.jpg"
+              src={`${process.env.PUBLIC_URL}/imgs/bg-login.jpg`}
               alt="bg login form"
               decoding="async"
             />

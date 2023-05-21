@@ -66,7 +66,7 @@ export default function TokenPayment() {
         <div className="bg">
           <h1>
             <img
-              src={`${process.env.REACT_APP_URL_BASE}/imgs/bg-login.jpg`}
+              src={`${process.env.PUBLIC_URL}/imgs/bg-login.jpg`}
               alt="bg login form"
               decoding="async"
             />

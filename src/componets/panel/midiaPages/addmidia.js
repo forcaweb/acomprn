@@ -256,7 +256,7 @@ export default function AddMidiasUser() {
             <nav className="finaleRegister">
               <a
                 href={`${
-                  process.env.REACT_APP_URL_BASE
+                  process.env.PUBLIC_URL
                 }/${user[0].callTypesrelations[0].typecall.name
                   .replaceAll(' ', '-')
                   .toLowerCase()}/${user[0].id}/${user[0].name

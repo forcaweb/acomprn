@@ -609,7 +609,7 @@ export default function CreateAds() {
             <nav className="finaleRegister">
               <a
                 href={`${
-                  process.env.REACT_APP_URL_BASE
+                  process.env.PUBLIC_URL
                 }/meu-perfil/${createdId}/${createdName
                   .replaceAll(' ', '-')
                   .toLowerCase()}`}
