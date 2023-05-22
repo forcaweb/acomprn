@@ -461,9 +461,9 @@ export default function PainelPayment() {
                   <label htmlFor="packages">Escolha um pacote</label>
                   {/* <small className="promotion">Promoção até Dezembro</small> */}
                   <select name="packages" id="packages">
-                    <option value="1">Pacote Padrão: R$ 50,00</option>
-                    <option value="2">Pacote Vip: R$ 100,00</option>
-                    <option value="3">Pacote Premium: R$ 200,00</option>
+                    <option value="1">Pacote Padrão: R$ 100,00</option>
+                    <option value="2">Pacote Vip: R$ 190,00</option>
+                    <option value="3">Pacote Premium: R$ 470,00</option>
                   </select>
                 </div>
 

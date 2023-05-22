@@ -5,7 +5,7 @@ import './notice.css';
 export default function Notice() {
   const saveClick = () => {
     const notice = document.querySelector('#notice');
-    const dateExpired = '2023-12-31 23:00';
+    const dateExpired = '2023-06-30 23:00';
     const formatDateExpired = new Date(dateExpired);
     const compareDates = formatDateExpired.getTime() - Number(Date.now());
     localStorage.setItem('XCLK', true);
