@@ -1,26 +1,74 @@
 User-agent: Googlebot
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: 008
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: SiteAuditBot
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: Semrushbot-SI
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: Yahoo Pipes 2.0
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: Facebot
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: Bingbot
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 User-agent: BingPreview
 Disallow: /panel/*
+Disallow: /panel/*
+Disallow: /payments-login/*
+Disallow: /payments-token/*
+Disallow: /payments-painel/*
+Disallow: /api/*
+Disallow: /search/*
 
 
 User-agent: *
@@ -30,8 +78,6 @@ Disallow: /payments-token/*
 Disallow: /payments-painel/*
 Disallow: /api/*
 Disallow: /search/*
-Disallow: /info/*
-Disallow: /acompanhantes-mulheres/*
 Allow: /
 
 

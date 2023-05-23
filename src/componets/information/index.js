@@ -210,7 +210,7 @@ export default function Information() {
                   </div>
                 )}
                 <div className="divisor">
-                  <h2>Ajude o site clicando nas Publicidades</h2>
+                  <h2>Publicidades</h2>
                 </div>
                 <div id="sp_7992546_node">&nbsp;</div>
               </section>
