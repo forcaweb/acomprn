@@ -8,7 +8,7 @@ export default function Sociais() {
       <div className="title">Siga-nos</div>
       <div className="twitter">
         <a
-          href="/"
+          href="https://twitter.com/DoAcompanh91890"
           target="blank"
           aria-label="Seguir no Twitter"
           title="Seguir no Twitter">

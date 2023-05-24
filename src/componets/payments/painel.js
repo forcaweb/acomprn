@@ -324,7 +324,7 @@ export default function PainelPayment() {
           <h1>
             <IconsSi.SiMoneygram /> Pagamentos
           </h1>
-          <sub>www.aschiquesdebsb.com.br</sub>
+          <sub>www.acompanhantesdorn.com.br</sub>
         </section>
 
         <section className="paymentHistory">
