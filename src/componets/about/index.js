@@ -46,6 +46,54 @@ export default function About() {
           Somos um site de anúncios adultos. Falar conosco,{' '}
           <a href="/contact">Clique aqui</a>
         </p>
+
+        <h2>O que encontrará aqui?</h2>
+        <p>Olá!</p>
+
+        <p>
+          Você está em busca de momentos incríveis, envolventes e cheios de
+          paixão? Então, tenho uma novidade para você! Apresento-lhe o nosso
+          exclusivo site, onde encontrará um universo de experiências
+          emocionantes e companhia excepcional.
+        </p>
+
+        <p>
+          Se você valoriza a elegância, a inteligência e a sensualidade, o nosso
+          site de acompanhantes é o lugar perfeito para você explorar. Nossas
+          acompanhantes são verdadeiras musas, capazes de cativar sua atenção e
+          tornar cada encontro uma lembrança inesquecível.
+        </p>
+
+        <p>
+          Cada mulher em nosso site é cuidadosamente selecionada, garantindo
+          beleza, charme e um alto nível de discrição. Elas são companheiras
+          perfeitas para eventos sociais, jantares românticos, viagens exóticas
+          ou momentos íntimos a dois.
+        </p>
+
+        <p>
+          Nossa prioridade é proporcionar a você uma experiência única, baseada
+          na confiança, respeito e prazer mútuo. Nosso site é um ambiente seguro
+          e discreto, onde você pode explorar suas fantasias mais secretas e
+          compartilhar momentos de intimidade com uma acompanhante sofisticada e
+          encantadora.
+        </p>
+
+        <p>
+          Então, permita-se vivenciar uma jornada fascinante com uma de nossas
+          acompanhantes. Explore o nosso site e descubra um mundo de
+          possibilidades e prazeres inimagináveis.
+        </p>
+
+        <p>
+          Não espere mais! Dê o primeiro passo em direção a uma experiência
+          verdadeiramente excepcional.
+        </p>
+
+        <p>
+          Bem-vindo ao nosso site de acompanhantes - onde seus desejos se tornam
+          realidade.
+        </p>
       </article>
     </main>
   );

@@ -237,120 +237,133 @@ export default function Home() {
           <div className="divisor">
             <h2>Postagens Recentes</h2>
           </div>
-          <div className="cardContainer">
-            {usersLastPost.map((itens) =>
-              itens.photos.length > 0 && Number(itens.active) === 1 ? (
-                <article key={itens.id} className="card" title={itens.name}>
-                  <a
-                    href={`/${itens.callTypesrelations[0].typecall.name
-                      .replaceAll(' ', '-')
-                      .toLowerCase()}/${itens.id}/${itens.name
-                      .replaceAll(' ', '-')
-                      .toLowerCase()}`}>
-                    {itens.photos.map((photoActive) =>
-                      photoActive.perfil === 'active' ? (
-                        <img
-                          crossOrigin="anonymous"
-                          src={`${process.env.REACT_APP_API_URL}/public/uploads/${photoActive.name}`}
-                          alt={itens.name}
-                          decoding="async"
-                          key={itens.id}
-                        />
-                      ) : null
-                    )}
+          {usersLastPost.length > 1 ? (
+            <div className="cardContainer">
+              {usersLastPost.map((itens) =>
+                itens.photos.length > 0 && Number(itens.active) === 1 ? (
+                  <article key={itens.id} className="card" title={itens.name}>
+                    <a
+                      href={`/${itens.callTypesrelations[0].typecall.name
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}/${itens.id}/${itens.name
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}`}>
+                      {itens.photos.map((photoActive) =>
+                        photoActive.perfil === 'active' ? (
+                          <img
+                            crossOrigin="anonymous"
+                            src={`${process.env.REACT_APP_API_URL}/public/uploads/${photoActive.name}`}
+                            alt={itens.name}
+                            decoding="async"
+                            key={itens.id}
+                          />
+                        ) : null
+                      )}
 
-                    <h2>{itens.name}</h2>
-                  </a>
-                  <div className="new_icons">
-                    <IconsAi.AiOutlineFire
-                      alt={`Novidade: ${itens.name}`}
-                      title={`Novidade: ${itens.name}`}
-                    />
-                    Novidade
-                  </div>
-                </article>
-              ) : null
-            )}
-          </div>
+                      <h2>{itens.name}</h2>
+                    </a>
+                    <div className="new_icons">
+                      <IconsAi.AiOutlineFire
+                        alt={`Novidade: ${itens.name}`}
+                        title={`Novidade: ${itens.name}`}
+                      />
+                      Novidade
+                    </div>
+                  </article>
+                ) : null
+              )}
+            </div>
+          ) : (
+            <p>Postaremos em breve...</p>
+          )}
 
           <div className="divisor">
             <h2>Postagens Recentes Premium</h2>
           </div>
-          <div className="cardContainer">
-            {userPremiumData.map((itens) =>
-              Number(itens.active) === 1 &&
-              Number(itens.premium) === 2 &&
-              itens.photos.length > 0 ? (
-                <article key={itens.id} className="card" title={itens.name}>
-                  <a
-                    href={`/${itens.callTypesrelations[0].typecall.name
-                      .replaceAll(' ', '-')
-                      .toLowerCase()}/${itens.id}/${itens.name
-                      .replaceAll(' ', '-')
-                      .toLowerCase()}`}>
-                    {itens.photos.map((photoActive) =>
-                      photoActive.perfil === 'active' ? (
-                        <img
-                          crossOrigin="anonymous"
-                          src={`${process.env.REACT_APP_API_URL}/public/uploads/${photoActive.name}`}
-                          alt={itens.name}
-                          decoding="async"
-                          key={itens.id}
-                        />
-                      ) : null
-                    )}
-                    <h2>{itens.name}</h2>
-                  </a>
-                  <div className="premium_icon">
-                    <IconsRi.RiVipCrown2Fill
-                      alt={`Garota Premium ${itens.name}`}
-                      title={`Garota Premium ${itens.name}`}
-                    />
-                    Premium
-                  </div>
-                </article>
-              ) : null
-            )}
-          </div>
+          {userPremiumData.length > 1 ? (
+            <div className="cardContainer">
+              {userPremiumData.map((itens) =>
+                Number(itens.active) === 1 &&
+                Number(itens.premium) === 2 &&
+                itens.photos.length > 0 ? (
+                  <article key={itens.id} className="card" title={itens.name}>
+                    <a
+                      href={`/${itens.callTypesrelations[0].typecall.name
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}/${itens.id}/${itens.name
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}`}>
+                      {itens.photos.map((photoActive) =>
+                        photoActive.perfil === 'active' ? (
+                          <img
+                            crossOrigin="anonymous"
+                            src={`${process.env.REACT_APP_API_URL}/public/uploads/${photoActive.name}`}
+                            alt={itens.name}
+                            decoding="async"
+                            key={itens.id}
+                          />
+                        ) : null
+                      )}
+                      <h2>{itens.name}</h2>
+                    </a>
+                    <div className="premium_icon">
+                      <IconsRi.RiVipCrown2Fill
+                        alt={`Garota Premium ${itens.name}`}
+                        title={`Garota Premium ${itens.name}`}
+                      />
+                      Premium
+                    </div>
+                  </article>
+                ) : null
+              )}
+            </div>
+          ) : (
+            <p>Postaremos em breve...</p>
+          )}
+
           <div className="divisor">
             <h2>Postagens Recentes Vip</h2>
           </div>
-          <div className="cardContainer">
-            {userVipData.map((itens) =>
-              Number(itens.active) === 1 &&
-              Number(itens.premium) === 1 &&
-              itens.photos.length > 0 ? (
-                <article key={itens.id} className="card" title={itens.name}>
-                  <a
-                    href={`/${itens.callTypesrelations[0].typecall.name
-                      .replaceAll(' ', '-')
-                      .toLowerCase()}/${itens.id}/${itens.name
-                      .replaceAll(' ', '-')
-                      .toLowerCase()}`}>
-                    {itens.photos.map((photoActive) =>
-                      photoActive.perfil === 'active' ? (
-                        <img
-                          crossOrigin="anonymous"
-                          src={`${process.env.REACT_APP_API_URL}/public/uploads/${photoActive.name}`}
-                          alt={itens.name}
-                          decoding="async"
-                          key={itens.id}
-                        />
-                      ) : null
-                    )}
-                    <h2>{itens.name}</h2>
-                  </a>
-                  <div className="vip_icon">
-                    <IconsRi.RiVipFill
-                      alt={`Garota Vip ${itens.name}`}
-                      title={`Garota Vip ${itens.name}`}
-                    />
-                    Vip
-                  </div>
-                </article>
-              ) : null
-            )}
-          </div>
+          {userVipData.length > 1 ? (
+            <div className="cardContainer">
+              {userVipData.map((itens) =>
+                Number(itens.active) === 1 &&
+                Number(itens.premium) === 1 &&
+                itens.photos.length > 0 ? (
+                  <article key={itens.id} className="card" title={itens.name}>
+                    <a
+                      href={`/${itens.callTypesrelations[0].typecall.name
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}/${itens.id}/${itens.name
+                        .replaceAll(' ', '-')
+                        .toLowerCase()}`}>
+                      {itens.photos.map((photoActive) =>
+                        photoActive.perfil === 'active' ? (
+                          <img
+                            crossOrigin="anonymous"
+                            src={`${process.env.REACT_APP_API_URL}/public/uploads/${photoActive.name}`}
+                            alt={itens.name}
+                            decoding="async"
+                            key={itens.id}
+                          />
+                        ) : null
+                      )}
+                      <h2>{itens.name}</h2>
+                    </a>
+                    <div className="vip_icon">
+                      <IconsRi.RiVipFill
+                        alt={`Garota Vip ${itens.name}`}
+                        title={`Garota Vip ${itens.name}`}
+                      />
+                      Vip
+                    </div>
+                  </article>
+                ) : null
+              )}
+            </div>
+          ) : (
+            <p>Postaremos em breve...</p>
+          )}
 
           {userMTData.length > 0 ? (
             <>
@@ -415,10 +428,10 @@ export default function Home() {
               ))}
             </div>
           )}
-          <div className="divisor">
+          {/* <div className="divisor">
             <h2>Publicidades</h2>
           </div>
-          <div id="sp_7992546_node">&nbsp;</div>
+          <div id="sp_7992546_node">&nbsp;</div> */}
         </section>
       </main>
     </>
