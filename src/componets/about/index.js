@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as IconsMd from 'react-icons/md';
+import * as IconsRi from 'react-icons/ri';
 import './about.css';
 
 export default function About() {
@@ -15,6 +16,16 @@ export default function About() {
       <article>
         <h1>Sobre nossos trabalhos</h1>
         <small>Abaixo veja nossas normas e tire suas dúvidas.</small>
+        <h2>Nossos Planos:</h2>
+        <p>
+          <IconsMd.MdOutlinePerson /> Padrão: R$ 100,00.
+        </p>
+        <p>
+          <IconsRi.RiVipFill /> Vip: R$ 190,00.
+        </p>
+        <p>
+          <IconsRi.RiVipCrown2Fill /> Premium: R$ 470,00.
+        </p>
 
         <h2>Antes de anúnciar, o que não pode ser anuniado:</h2>
         <p>

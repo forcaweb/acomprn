@@ -34,6 +34,11 @@
   font-family: Noto-b;
   font-size: 50px;
   color: var(--pink);
+  text-align: center;
+}
+
+.homeContainer .headerInitial p {
+  text-align: center;
 }
 
 .homeContainer .headerInitialSearch {

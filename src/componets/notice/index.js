@@ -5,7 +5,7 @@ import './notice.css';
 export default function Notice() {
   const saveClick = () => {
     const notice = document.querySelector('#notice');
-    const dateExpired = '2023-06-30 23:00';
+    const dateExpired = '2023-08-01 23:00';
     const formatDateExpired = new Date(dateExpired);
     const compareDates = formatDateExpired.getTime() - Number(Date.now());
     localStorage.setItem('XCLK', true);
@@ -45,7 +45,7 @@ export default function Notice() {
           <IconsAi.AiOutlineClose id="close-icon" />
         </button>
         <a
-          href="https://wa.me/5561982706346?text=Ol%C3%A1%2C+tudo+bem%3F+quero+falar+com+um+atendente."
+          href="https://wa.me/5584996338660?text=Ol%C3%A1%2C+tudo+bem%3F+quero+falar+com+um+atendente."
           aria-label="Promoção Acompanhantes do RN"
           title="Promoção Acompanhantes do RN">
           <img src="./imgs/notice.jpg" alt="Promoção Acompanhantes do RN" />
