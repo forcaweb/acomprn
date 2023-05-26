@@ -19,7 +19,7 @@ export default function MenuSm() {
         <nav>
           <li>
             <a href="/" id="logo">
-              <img src="../imgs/logo.png" alt="Logo" />
+              <img src={`${process.env.PUBLIC_URL}/imgs/logo.png`} alt="Logo" />
             </a>
           </li>
         </nav>
