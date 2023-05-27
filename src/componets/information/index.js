@@ -169,7 +169,9 @@ export default function Information() {
                     href={`https://wa.me/55${userData[0].phone.replace(
                       /\D/gim,
                       ''
-                    )}?text=Ol%C3%A1%2C+vi+seu+an%C3%BAncio+no+site+aschiquesdebsb.com.br.+Quero+bater+um+papo+com+voc%C3%AA.`}>
+                    )}?text=Ol%C3%A1%2C+vi+seu+an%C3%BAncio+no+site+${
+                      process.env.REACT_APP_URL_DOMINIO
+                    }.+Quero+bater+um+papo+com+voc%C3%AA.`}>
                     Whatsapp <IconsRi.RiArrowRightSLine />
                   </a>
                 </nav>
