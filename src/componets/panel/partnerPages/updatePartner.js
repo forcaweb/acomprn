@@ -221,7 +221,7 @@ export default function UpdatePartners() {
               defaultValue={
                 resultuser[0].partner ? resultuser[0].partner.linksite : null
               }
-              placeholder="Ex.: https://aschiquesdebsb.com.br."
+              placeholder="Ex.: https://google.com.br."
               maxLength="150"
               minLength="3"
               required

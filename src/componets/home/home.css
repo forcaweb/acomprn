@@ -293,6 +293,7 @@
 
 .content .cardContainer .card .normal_icons {
   background-color: #000;
+  color: var(--white);
   position: absolute;
   top: 0;
   right: -60px;

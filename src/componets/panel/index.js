@@ -27,6 +27,8 @@ import DeletePartners from './partnerPages/delPartners';
 import UpdatePartners from './partnerPages/updatePartner';
 import PerfilPhotosUser from './midiaPages/perfilUpdate';
 import FindNameUser from './adsPages/findname';
+import AddNotice from './noticePages/addNotices';
+import DeleteNotice from './noticePages/delNotice';
 
 export function showMenu(e) {
   e.preventDefault();
@@ -268,10 +270,30 @@ export default function Panel() {
           ''
         )}
 
+        {userData.typeuser === 'Admin' || userData.typeuser === 'GM' ? (
+          <li className="dropdown dropdown_list_7">
+            <button type="button" onClick={expandMenu} id="7">
+              Avisos
+            </button>
+            <ul>
+              <li>
+                <a href="/panel/addnotice">Adicionar Aviso</a>
+              </li>
+              <li>
+                <a href="/panel/delnotice">Deletar Aviso</a>
+              </li>
+            </ul>
+          </li>
+        ) : (
+          ''
+        )}
+
         <button type="button" id="logout" onClick={logout}>
           <IconsAi.AiOutlineLogout /> Sair
         </button>
       </nav>
+      {PageSelected === 'addnotice' ? <AddNotice /> : null}
+      {PageSelected === 'delnotice' ? <DeleteNotice /> : null}
       {PageSelected === 'createads' ? <CreateAds /> : null}
       {PageSelected === 'deleteads' ? <DeleteAds /> : null}
       {PageSelected === 'searchads' ? <FindNameUser /> : null}

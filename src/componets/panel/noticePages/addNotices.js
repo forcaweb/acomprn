@@ -2,20 +2,17 @@ import * as React from 'react';
 import axios from 'axios';
 import LoadingPages from '../../loading';
 
-export default function AddPartners() {
+export default function AddNotice() {
   const [loadingPages, setLoadingPages] = React.useState(false);
   const confirm = document.getElementById('confirm');
   const token = localStorage.getItem('token');
-  const [user, setUser] = React.useState([]);
+  const [errorNotice, setErrorNotice] = React.useState([]);
   const msg = document.querySelector('#formmsg');
 
-  const savePartners = async (ev) => {
+  const saveNotice = async (ev) => {
     ev.preventDefault();
     setLoadingPages(true);
     const images = document.getElementById('image');
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
     const expired = document.getElementById('expired_in');
     const linksite = document.getElementById('sitelink');
 
@@ -38,9 +35,6 @@ export default function AddPartners() {
 
     const formd = new FormData();
     formd.append('image', images.files[0]);
-    formd.append('name', name.value);
-    formd.append('email', email.value);
-    formd.append('phone', phone.value);
     formd.append('expired_in', exp);
     formd.append('linksite', linksite.value);
     try {
@@ -49,20 +43,19 @@ export default function AddPartners() {
         authorization: token
       };
       await axios({
-        url: `${process.env.REACT_APP_API_URL}/partner/`,
+        url: `${process.env.REACT_APP_API_URL}/notice/`,
         method: 'POST',
         data: formd,
         headers
       }).then((resp) => {
         if (resp.data.msg) {
-          setUser([]);
           msg.innerHTML = resp.data.msg;
+          setErrorNotice([]);
+        } else {
+          msg.style.display = 'none';
+          setErrorNotice(resp.data);
         }
 
-        if (!resp.data.msg) {
-          setUser(resp.data);
-          msg.style.display = 'none';
-        }
         setLoadingPages(false);
       });
     } catch (error) {
@@ -85,57 +78,6 @@ export default function AddPartners() {
           className="effectFade"
           encType="multipart/form-data">
           <output id="formmsg" className="msgs" />
-          <label htmlFor="name">Titulo:</label>
-          <input
-            name="name"
-            id="name"
-            type="text"
-            placeholder="Digite o titulo."
-            maxLength="50"
-            minLength="3"
-            required
-          />
-          {user.map((itens) =>
-            itens.nameError ? (
-              <p className="showmsg" key={itens}>
-                {itens.nameError}
-              </p>
-            ) : null
-          )}
-          <label htmlFor="email">Email:</label>
-          <input
-            name="email"
-            id="email"
-            type="text"
-            placeholder="Digite o email."
-            maxLength="50"
-            minLength="3"
-            required
-          />
-          {user.map((itens) =>
-            itens.emailError ? (
-              <p className="showmsg" key={itens}>
-                {itens.emailError}
-              </p>
-            ) : null
-          )}
-          <label htmlFor="phone">Telefone:</label>
-          <input
-            name="phone"
-            id="phone"
-            type="text"
-            placeholder="Digite o Telefone."
-            maxLength="50"
-            minLength="3"
-            required
-          />
-          {user.map((itens) =>
-            itens.phoneError ? (
-              <p className="showmsg" key={itens}>
-                {itens.phoneError}
-              </p>
-            ) : null
-          )}
 
           <label htmlFor="sitelink">Link do site:</label>
           <input
@@ -147,7 +89,7 @@ export default function AddPartners() {
             minLength="3"
             required
           />
-          {user.map((itens) =>
+          {errorNotice.map((itens) =>
             itens.linkError ? (
               <p className="showmsg" key={itens}>
                 {itens.linkError}
@@ -163,7 +105,7 @@ export default function AddPartners() {
             placeholder="Digite data de expiração."
             required
           />
-          {user.map((itens) =>
+          {errorNotice.map((itens) =>
             itens.expiredError ? (
               <p className="showmsg" key={itens}>
                 {itens.expiredError}
@@ -180,7 +122,7 @@ export default function AddPartners() {
             accept=".png, .jpg, .jpeg"
             required
           />
-          <button type="submit" onClick={savePartners}>
+          <button type="submit" onClick={saveNotice}>
             Cadastrar
           </button>
         </form>
