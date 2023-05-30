@@ -4,7 +4,7 @@ import * as IconsAi from 'react-icons/ai';
 import * as IconsBi from 'react-icons/bi';
 import Moment from 'react-moment';
 import 'moment-timezone';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './panel.css';
 import axios from 'axios';
 import CreateAds from './adsPages/createads';
@@ -138,16 +138,16 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/searchads">Procurar Anunciante</a>
+                <Link to="/panel/searchads">Procurar Anunciante</Link>
               </li>
               <li>
-                <a href="/panel/createads">Adicionar Anunciante</a>
+                <Link to="/panel/createads">Adicionar Anunciante</Link>
               </li>
               <li>
-                <a href="/panel/updateads">Atualizar Anunciante</a>
+                <Link to="/panel/updateads">Atualizar Anunciante</Link>
               </li>
               <li>
-                <a href="/panel/deleteads">Deletar Anunciante</a>
+                <Link to="/panel/deleteads">Deletar Anunciante</Link>
               </li>
             </ul>
           </li>
@@ -162,10 +162,10 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/createandress">Adicionar Endereços</a>
+                <Link to="/panel/createandress">Adicionar Endereços</Link>
               </li>
               <li>
-                <a href="/panel/deleteandress">Deletar Endereços</a>
+                <Link to="/panel/deleteandress">Deletar Endereços</Link>
               </li>
             </ul>
           </li>
@@ -180,10 +180,10 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/toc">Adicionar Tipo de Cliente</a>
+                <Link to="/panel/toc">Adicionar Tipo de Cliente</Link>
               </li>
               <li>
-                <a href="/panel/deltoc">Deletar Tipo de Cliente</a>
+                <Link to="/panel/deltoc">Deletar Tipo de Cliente</Link>
               </li>
             </ul>
           </li>
@@ -198,11 +198,11 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/tc">Adicionar Tipos de atendimentos</a>
+                <Link to="/panel/tc">Adicionar Tipos de atendimentos</Link>
               </li>
 
               <li>
-                <a href="/panel/deltc">Deletar Tipos de atendimentos</a>
+                <Link to="/panel/deltc">Deletar Tipos de atendimentos</Link>
               </li>
             </ul>
           </li>
@@ -217,13 +217,13 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/perfilphoto">Foto de Perfil</a>
+                <Link to="/panel/perfilphoto">Foto de Perfil</Link>
               </li>
               <li>
-                <a href="/panel/addmidias">Adicionar fotos/videos</a>
+                <Link to="/panel/addmidias">Adicionar fotos/videos</Link>
               </li>
               <li>
-                <a href="/panel/delmidias">Delete fotos/videos</a>
+                <Link to="/panel/delmidias">Delete fotos/videos</Link>
               </li>
             </ul>
           </li>
@@ -238,10 +238,10 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/addlogin">Adicionar Usuário</a>
+                <Link to="/panel/addlogin">Adicionar Usuário</Link>
               </li>
               <li>
-                <a href="/panel/dellogin">Delete Usuário</a>
+                <Link to="/panel/dellogin">Delete Usuário</Link>
               </li>
             </ul>
           </li>
@@ -256,13 +256,13 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/addpartner">Adicionar publicidade</a>
+                <Link to="/panel/addpartner">Adicionar publicidade</Link>
               </li>
               <li>
-                <a href="/panel/delpartner">Deletar publicidade</a>
+                <Link to="/panel/delpartner">Deletar publicidade</Link>
               </li>
               <li>
-                <a href="/panel/updatepartner">Atualizar publicidade</a>
+                <Link to="/panel/updatepartner">Atualizar publicidade</Link>
               </li>
             </ul>
           </li>
@@ -277,10 +277,10 @@ export default function Panel() {
             </button>
             <ul>
               <li>
-                <a href="/panel/addnotice">Adicionar Aviso</a>
+                <Link to="/panel/addnotice">Adicionar Aviso</Link>
               </li>
               <li>
-                <a href="/panel/delnotice">Deletar Aviso</a>
+                <Link to="/panel/delnotice">Deletar Aviso</Link>
               </li>
             </ul>
           </li>

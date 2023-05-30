@@ -332,10 +332,10 @@ export default function SearchAds() {
             )}
           </div>
         )}
-        {/* <div className="divisor">
+        <div className="divisor">
           <h2>Publicidades</h2>
         </div>
-        <div id="sp_7992546_node">&nbsp;</div> */}
+        <div id="sp_7995050_node">&nbsp;</div>
       </section>
     </main>
   );

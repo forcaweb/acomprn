@@ -85,5 +85,30 @@
   </head>
   <body>
     <div id="root" class="fadeEffect"></div>
+
+    <script type="text/javascript" charset="utf-8">
+      if (typeof eaCtrl == 'undefined') {
+        var eaCtrlRecs = [];
+        var eaCtrl = {
+          add: function (ag) {
+            eaCtrlRecs.push(ag);
+          }
+        };
+        var js = document.createElement('script');
+        js.setAttribute(
+          'src',
+          '//go.eabids.com/loadeactrl.go?pid=134460&spaceid=7995050&ctrlid=791096'
+        );
+        document.head.appendChild(js);
+      }
+
+      eaCtrl.add({
+        display: 'sp_7995050_node',
+        sid: 7995050,
+        plugin: 'banner',
+        subid: '',
+        maincat: ''
+      });
+    </script>
   </body>
 </html>
