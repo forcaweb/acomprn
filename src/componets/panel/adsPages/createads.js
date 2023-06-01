@@ -235,7 +235,7 @@ export default function CreateAds() {
                 id="name"
                 type="text"
                 placeholder="Digite o Titulo do anúncio."
-                maxLength="50"
+                maxLength="150"
                 minLength="3"
                 required
               />

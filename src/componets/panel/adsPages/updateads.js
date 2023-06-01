@@ -305,7 +305,7 @@ export default function UpdateAds() {
               id="name"
               type="text"
               placeholder="Digite o Titulo do anúncio."
-              maxLength="50"
+              maxLength="150"
               minLength="3"
               defaultValue={userUpdate[0].name}
               required

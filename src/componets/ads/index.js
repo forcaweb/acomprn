@@ -23,7 +23,7 @@ export default function AdsClient() {
 
         <a
           id="wts"
-          href="/"
+          href={process.env.REACT_APP_URL_WHATSAPP}
           aria-label="Chat on Whatsapp"
           title="Chat on Whatsapp">
           <IconFa.FaWhatsapp />

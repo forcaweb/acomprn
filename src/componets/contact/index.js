@@ -28,33 +28,45 @@ export default function Contact() {
       <div>
         <nav>
           <li>
-            <a href="tel:+" aria-label="phone contact" title="phone contact">
+            <a
+              href={`tel:+:${process.env.REACT_APP_URL_TELL}`}
+              aria-label="phone contact"
+              title="phone contact">
               <IconFa.FaPhone />
               Telefone
             </a>
           </li>
           <li>
             <a
-              href="mailto:acompanhantesdorn@gmail.com"
+              href={`mailto:${process.env.REACT_APP_URL_EMAIL}`}
               aria-label="E-mail"
               title="E-mail">
               <IconMd.MdAlternateEmail /> E-mail
             </a>
           </li>
           <li>
-            <a href="/" aria-label="Chat on Whatsapp" title="Chat on Whatsapp">
+            <a
+              href={process.env.REACT_APP_URL_WHATSAPP}
+              aria-label="Chat on Whatsapp"
+              title="Chat on Whatsapp">
               <IconFa.FaWhatsapp />
               Whatsapp
             </a>
           </li>
           <li>
-            <a href="/" aria-label="Instagram" title="Instagram">
+            <a
+              href={process.env.REACT_APP_URL_INSTAGRAM}
+              aria-label="Instagram"
+              title="Instagram">
               <IconFa.FaInstagram />
               Instagram
             </a>
           </li>
           <li>
-            <a href="/" aria-label="Twitter" title="Twitter">
+            <a
+              href={process.env.REACT_APP_URL_TWITTER}
+              aria-label="Twitter"
+              title="Twitter">
               <IconFa.FaTwitter />
               Twitter
             </a>

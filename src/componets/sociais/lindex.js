@@ -8,7 +8,7 @@ export default function Sociais() {
       <div className="title">Siga-nos</div>
       <div className="twitter">
         <a
-          href="https://twitter.com/DoAcompanh91890"
+          href={process.env.REACT_APP_URL_TWITTER}
           target="blank"
           aria-label="Seguir no Twitter"
           title="Seguir no Twitter">
@@ -17,7 +17,7 @@ export default function Sociais() {
       </div>
       <div className="inst">
         <a
-          href="/"
+          href={process.env.REACT_APP_URL_INSTAGRAM}
           target="blank"
           aria-label="Seguir no Instagram"
           title="Seguir no Instagram">
