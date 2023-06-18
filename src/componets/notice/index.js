@@ -1,14 +1,26 @@
 import * as React from 'react';
 import * as IconsAi from 'react-icons/ai';
+import axios from 'axios';
 import './notice.css';
 
 export default function Notice() {
+  const [noticeData, setNoticeData] = React.useState({
+    error: true,
+    notice: []
+  });
+
+  const getNoticies = async () => {
+    const result = await axios.get(`${process.env.REACT_APP_API_URL}/notice/`);
+    setNoticeData(result.data);
+  };
+
   const saveClick = () => {
     const notice = document.querySelector('#notice');
-    const dateExpired = '2023-08-01 23:00';
-    const formatDateExpired = new Date(dateExpired);
-    const compareDates = formatDateExpired.getTime() - Number(Date.now());
+    const dateExpired = noticeData.notice.expired_in;
+    const compareDates = Number(dateExpired) - Number(Date.now());
     localStorage.setItem('XCLK', true);
+    const pausedDateModal = Number(Date.now()) + 3600000;
+    localStorage.setItem('XPM', pausedDateModal);
     if (compareDates <= 0) {
       notice.style.display = 'none';
     }
@@ -35,22 +47,41 @@ export default function Notice() {
       }
     });
   };
+
+  const refreshModal = () => {
+    const modalTime = localStorage.getItem('XPM');
+    const compareDates = Number(modalTime) - Number(Date.now());
+    if (compareDates <= 0) {
+      localStorage.removeItem('XCLK');
+    }
+  };
+
   React.useEffect(() => {
-    document.onload = handleClick();
+    refreshModal();
+    getNoticies();
+    handleClick();
   });
   return (
-    <div className="notice" id="notice">
-      <div className="content">
-        <button type="button" id="close" title="Fechar">
-          <IconsAi.AiOutlineClose id="close-icon" />
-        </button>
-        <a
-          href="https://wa.me/5584996338660?text=Ol%C3%A1%2C+tudo+bem%3F+quero+falar+com+um+atendente."
-          aria-label="Promoção Acompanhantes do RN"
-          title="Promoção Acompanhantes do RN">
-          <img src="./imgs/notice.jpg" alt="Promoção Acompanhantes do RN" />
-        </a>
-      </div>
+    <div>
+      {noticeData.error === false ? (
+        <div className="notice" id="notice">
+          <div className="content">
+            <button type="button" id="close" title="Fechar">
+              <IconsAi.AiOutlineClose id="close-icon" />
+            </button>
+            <a
+              href={noticeData.notice.linksite}
+              aria-label={noticeData.notice.linksite}
+              title={noticeData.notice.linksite}>
+              <img
+                src={`${process.env.REACT_APP_API_URL}/public/uploads/${noticeData.notice.image}`}
+                alt={noticeData.notice.linksite}
+                crossOrigin="anonymous"
+              />
+            </a>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
