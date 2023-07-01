@@ -18,14 +18,19 @@ export default function MenuSm() {
       <div className="menucontainersm">
         <nav>
           <li>
-            <a href="/" id="logo">
+            <a
+              href="/acompanhantes-do-rio-grande-do-norte-rn-pernambuco-pe-paraiba-pb/"
+              id="logo">
               <img src={`${process.env.PUBLIC_URL}/imgs/logo.png`} alt="Logo" />
             </a>
           </li>
         </nav>
         <nav id="menusm">
           <li>
-            <a href="/" title="Página inicial" alt="Página inicial">
+            <a
+              href="/acompanhantes-do-rio-grande-do-norte-rn-pernambuco-pe-paraiba-pb/"
+              title="Página inicial"
+              alt="Página inicial">
               <IconAi.AiFillHome /> Home
             </a>
           </li>

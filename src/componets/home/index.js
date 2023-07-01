@@ -180,9 +180,12 @@ export default function Home() {
       <main className="homeContainer fadeEffect">
         <section className="headerInitial">
           <h1 title="Acompanhantes do Rio Grande do Norte">
-            Acompanhantes do RN
+            Acompanhantes do RN, PE, PB
           </h1>
-          <p>Mulheres lindas e formosas. Encontre a ideal em sua região.</p>
+          <p>
+            Descubra o prazer e a sofisticação das acompanhantes de luxo no Rio
+            Grande do Norte, Paraíba e Pernambuco.
+          </p>
         </section>
         <section className="headerInitialSearch">
           <form action="/" method="Post" onChange={goToSearch}>

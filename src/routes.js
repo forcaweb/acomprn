@@ -45,6 +45,10 @@ export function RoutesWebPublic() {
         <Route path="/panel" element={<PrivateRoute />} />
         <Route path="/panel/:p" element={<PrivateRoute />} />
         <Route path="/" element={<Home />} />
+        <Route
+          path="acompanhantes-do-rio-grande-do-norte-rn-pernambuco-pe-paraiba-pb"
+          element={<Home />}
+        />
         <Route path="/:cat/:id/:name" element={<Information />} />
         <Route path="/policy/" element={<PrivacyPolicy />} />
         <Route path="/contact/" element={<Contact />} />

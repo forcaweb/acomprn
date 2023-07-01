@@ -16,14 +16,21 @@ export default function Header() {
       <MenuSm />
       <nav>
         <li>
-          <a href="/" id="logo" title="Logo oficial" alt="Logo oficial">
+          <a
+            href="/acompanhantes-do-rio-grande-do-norte-rn-pernambuco-pe-paraiba-pb/"
+            id="logo"
+            title="Logo oficial"
+            alt="Logo oficial">
             <img src={`${process.env.PUBLIC_URL}/imgs/logo.png`} alt="Logo" />
           </a>
         </li>
       </nav>
       <nav id="menu">
         <li>
-          <a href="/" title="Página inicial" alt="Página inicial">
+          <a
+            href="/acompanhantes-do-rio-grande-do-norte-rn-pernambuco-pe-paraiba-pb/"
+            title="Página inicial"
+            alt="Página inicial">
             <IconAi.AiFillHome /> Home
           </a>
         </li>

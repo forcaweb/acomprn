@@ -57,9 +57,9 @@ export default function Notice() {
   };
 
   React.useEffect(() => {
-    refreshModal();
     getNoticies();
     handleClick();
+    refreshModal();
   });
   return (
     <div>
