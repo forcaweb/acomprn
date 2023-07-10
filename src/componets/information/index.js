@@ -190,28 +190,6 @@ export default function Information() {
               </div>
               <section className="content">
                 <div className="divisor">
-                  <h2>Parcerias & Publicidades</h2>
-                </div>
-                {partners.error === null ? (
-                  <p>Postaremos em breve...</p>
-                ) : (
-                  <div className="cardContainer partners">
-                    {partners.map((itens) => (
-                      <article className="card">
-                        <a href={itens.linksite} target="blank">
-                          <img
-                            crossOrigin="anonymous"
-                            src={`${process.env.REACT_APP_API_URL}/public/uploads/${itens.image}`}
-                            alt={itens.name}
-                            title={itens.name}
-                            decoding="async"
-                          />
-                        </a>
-                      </article>
-                    ))}
-                  </div>
-                )}
-                <div className="divisor">
                   <h2>Publicidades</h2>
                 </div>
                 <div id="sp_7995050_node">&nbsp;</div>
