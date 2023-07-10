@@ -13,10 +13,8 @@ export default function Home() {
   const [userMTData, setUserMTData] = React.useState([]);
   const [userVipData, setUserVipData] = React.useState([]);
 
-  const [selectedAndress, setSelectedAndress] = React.useState('');
   const [andress, setAndress] = React.useState([]);
   const [TOC, setTOC] = React.useState([]);
-  const [selectedCall, setSelectedCall] = React.useState('');
   const [typeCalls, setTypeCalls] = React.useState([]);
   const [partners, setPartners] = React.useState([]);
   const getPartners = async () => {
@@ -79,14 +77,6 @@ export default function Home() {
     }
   };
 
-  const handleChangeAndress = (event) => {
-    setSelectedAndress(event.target.value);
-  };
-
-  const handleChangeCall = (event) => {
-    setSelectedCall(event.target.value);
-  };
-
   const listCallsPost = async () => {
     try {
       const headers = { 'Content-Type': 'application/json' };
@@ -147,20 +137,20 @@ export default function Home() {
     }
   };
 
-  const goToSearch = () => {
-    const tc = document.getElementById('tc').value;
-    const city = document.getElementById('city').value;
-    const querytccamp = tc.replaceAll(' ', '-').toLowerCase();
-    const querycitycamp = city
-      .replaceAll(' ', '-')
-      .replaceAll('---', '-')
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase();
-    if (tc === '' || city === '') return;
-    window.location.href = `/search/${querycitycamp}/${querytccamp}
-    `;
-  };
+  // const goToSearch = () => {
+  //   const tc = document.getElementById('tc').value;
+  //   const city = document.getElementById('city').value;
+  //   const querytccamp = tc.replaceAll(' ', '-').toLowerCase();
+  //   const querycitycamp = city
+  //     .replaceAll(' ', '-')
+  //     .replaceAll('---', '-')
+  //     .normalize('NFD')
+  //     .replace(/[\u0300-\u036f]/g, '')
+  //     .toLowerCase();
+  //   if (tc === '' || city === '') return;
+  //   window.location.href = `/search/${querycitycamp}/${querytccamp}
+  //   `;
+  // };
 
   React.useEffect(() => {
     if (usersLastPost.length <= 0) listLastPost();
@@ -188,45 +178,25 @@ export default function Home() {
           </p>
         </section>
         <section className="headerInitialSearch">
-          <form action="/" method="Post" onChange={goToSearch}>
+          <nav>
             <div className="divisor">
-              <h2>Pesquisar:</h2>
+              <h2>Categorias:</h2>
             </div>
-            <div className="campsForms">
-              <label htmlFor="tc">Categoria: </label>
-              <select
-                name="tc"
-                id="tc"
-                value={selectedCall}
-                onChange={handleChangeCall}>
-                <option value="" disabled>
-                  Selecione uma Categoria...
-                </option>
+            <div>
+              <ul>
                 {typeCalls.map((option) => (
-                  <option key={option.id} value={option.name}>
+                  <a
+                    key={option.id}
+                    value={option.name}
+                    href={`/search/natal-rn/${option.name
+                      .replaceAll(' ', '-')
+                      .toLowerCase()}`}>
                     {option.name}
-                  </option>
+                  </a>
                 ))}
-              </select>
+              </ul>
             </div>
-            <div className="campsForms">
-              <label htmlFor="city">End.: </label>
-              <select
-                name="city"
-                id="city"
-                value={selectedAndress}
-                onChange={handleChangeAndress}>
-                <option value="" disabled>
-                  Selecione um Endereço...
-                </option>
-                {andress.map((option) => (
-                  <option key={option.id} value={option.city_and_state}>
-                    {option.city_and_state}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </form>
+          </nav>
         </section>
         <section className="content">
           <div className="intro">

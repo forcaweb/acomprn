@@ -20,28 +20,9 @@ export default function SearchAds() {
     querycity.length - 2
   )}-${querycity.substring(querycity.length - 2)}`.replaceAll(' -', '-');
 
-  const querytcselected = qtc.replaceAll(' ', '-').toLowerCase();
-  const querycityselected = qadrs
-    .replaceAll(' ', '-')
-    .replaceAll('---', '-')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase();
-
-  const [selectedAndress, setSelectedAndress] =
-    React.useState(querycityselected);
   const [andress, setAndress] = React.useState([]);
   const [TOC, setTOC] = React.useState([]);
-  const [selectedCall, setSelectedCall] = React.useState(querytcselected);
   const [typeCalls, setTypeCalls] = React.useState([]);
-
-  const handleChangeAndress = (event) => {
-    setSelectedAndress(event.target.value);
-  };
-
-  const handleChangeCall = (event) => {
-    setSelectedCall(event.target.value);
-  };
 
   const listCallsPost = async () => {
     try {
@@ -103,19 +84,24 @@ export default function SearchAds() {
     }
   };
 
-  const goToSearch = () => {
-    const tc = document.getElementById('tc').value;
-    const city = document.getElementById('city').value;
-    const querytccamp = tc.replaceAll(' ', '-').toLowerCase();
-    const querycitycamp = city
-      .replaceAll(' ', '-')
-      .replaceAll('---', '-')
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase();
-    if (tc === '' || city === '') return;
-    window.location.href = `/search/${querycitycamp}/${querytccamp}
-    `;
+  // const goToSearch = () => {
+  //   const tc = document.getElementById('tc').value;
+  //   const city = document.getElementById('city').value;
+  //   const querytccamp = tc.replaceAll(' ', '-').toLowerCase();
+  //   const querycitycamp = city
+  //     .replaceAll(' ', '-')
+  //     .replaceAll('---', '-')
+  //     .normalize('NFD')
+  //     .replace(/[\u0300-\u036f]/g, '')
+  //     .toLowerCase();
+  //   if (tc === '' || city === '') return;
+  //   window.location.href = `/search/${querycitycamp}/${querytccamp}
+  //   `;
+  // };
+
+  const handleClickShowListAdress = () => {
+    const list = document.querySelector('.campsForms');
+    list.classList.toggle('showlist');
   };
 
   React.useEffect(() => {
@@ -131,54 +117,37 @@ export default function SearchAds() {
   return (
     <main className="homeContainer fadeEffect">
       <section className="headerInitialSearch">
-        <form action="/" method="Post" onChange={goToSearch}>
+        <nav>
           <div className="divisor">
-            <h2>Pesquisar:</h2>
+            <h2>Por Regiões:</h2>
+            <button
+              type="button"
+              className="showMenu"
+              onClick={handleClickShowListAdress}>
+              Mostrar Regiões
+            </button>
           </div>
           <div className="campsForms">
-            <label htmlFor="tc">Categoria: </label>
-            <select
-              name="tc"
-              id="tc"
-              value={selectedCall}
-              onChange={handleChangeCall}>
-              <option value="" disabled>
-                Selecione uma Categoria...
-              </option>
-              {typeCalls.map((option) => (
-                <option
-                  key={option.id}
-                  value={option.name.replaceAll(' ', '-').toLowerCase()}>
-                  {option.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="campsForms">
-            <label htmlFor="city">End.: </label>
-            <select
-              name="city"
-              id="city"
-              value={selectedAndress}
-              onChange={handleChangeAndress}>
-              <option value="" disabled>
-                Selecione um Endereço...
-              </option>
+            <ul>
               {andress.map((option) => (
-                <option
+                <a
+                  className="linkSmall"
                   key={option.id}
-                  value={option.city_and_state
+                  value={option.city_and_state}
+                  href={`/search/${option.city_and_state
                     .replaceAll(' ', '-')
                     .replaceAll('---', '-')
                     .normalize('NFD')
                     .replace(/[\u0300-\u036f]/g, '')
-                    .toLowerCase()}>
+                    .toLowerCase()}/${querytc
+                    .replaceAll(' ', '-')
+                    .toLowerCase()}`}>
                   {option.city_and_state}
-                </option>
+                </a>
               ))}
-            </select>
+            </ul>
           </div>
-        </form>
+        </nav>
       </section>
       <section className="content">
         <div className="intro">

@@ -43,15 +43,20 @@
 
 .homeContainer .headerInitialSearch {
   width: 100%;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 10px;
+  background-color: var(--white);
+  padding: 30px;
+  text-align: center;
 }
 
-.homeContainer .headerInitialSearch form {
+.homeContainer .headerInitialSearch nav ul {
   width: 100%;
   position: relative;
   display: flex;
@@ -59,48 +64,66 @@
   align-items: center;
   padding: 15px;
   flex-direction: row;
-  background: linear-gradient(to left, var(--black), var(--pink));
+  border-radius: 4px;
   gap: 10px;
-  color: var(--white);
+  overflow: hidden;
 }
 
-.homeContainer .headerInitialSearch form .campsForms {
-  width: 100%;
+.homeContainer .headerInitialSearch nav ul {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   flex-direction: row;
-  background: var(--pink-dark);
   border-radius: 4px;
   flex: auto;
+  flex-wrap: wrap;
 }
 
-.homeContainer .headerInitialSearch form label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.homeContainer .headerInitialSearch .campsForms {
   position: relative;
-  font-family: Noto-b;
-  font-size: 16px;
-  color: var(--white);
-  padding: 10px;
+  display: block;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.9s all;
 }
 
-.homeContainer .headerInitialSearch form select {
+.homeContainer .headerInitialSearch .showMenu {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.homeContainer .headerInitialSearch .showlist {
+  max-height: 1000px;
+  overflow: auto;
+}
+
+.homeContainer .headerInitialSearch nav ul a {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 18px;
   padding: 10px;
   border: none;
-  background: var(--pink-dark);
+  background: var(--red);
   color: var(--white);
   border-radius: 4px;
-  width: 100%;
+  flex: auto;
+}
+
+.homeContainer .headerInitialSearch .linkSmall {
+  font-size: 14px;
 }
 
 .content {
